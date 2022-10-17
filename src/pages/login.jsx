@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 
 import { useAxios } from "../hooks/useAxios";
 import AuthForm from "../components/authForm/authForm";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header";
+import { TokenContext } from "../context/tokenContext";
 
 const Login = () => {
-  let navigate = useNavigate();
   const { response, fetchData } = useAxios();
+  const { setToken } = useContext(TokenContext);
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -26,15 +26,9 @@ const Login = () => {
   useEffect(() => {
     if (response !== null && response?.access_token) {
       localStorage.setItem("JWT", response.access_token);
-      navigate("/todo");
+      setToken(true);
     }
   }, [response]);
-
-  useEffect(() => {
-    if (localStorage.getItem("JWT")) {
-      navigate("/todo");
-    }
-  }, []);
 
   return (
     <Wrapper>

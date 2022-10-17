@@ -1,28 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 
 import ToDoForm from "../components/toDoForm/toDoForm";
 import ToDoItem from "../components/toDoItem/toDoItem";
-import ToDoList from "../components/toDoList/toDoList";
+import { TokenContext } from "../context/tokenContext";
 import { useAxios } from "../hooks/useAxios";
 
 const ToDo = () => {
-  const navigate = useNavigate();
   const [todos, setTodos] = useState([]);
   const [refetch, setRefetch] = useState(false);
   const { status, response, error, loading, fetchData } = useAxios();
+  const { setToken } = useContext(TokenContext);
 
   const onLogout = (event) => {
     localStorage.removeItem("JWT");
-    navigate("/");
+    setToken(false);
   };
-
-  useEffect(() => {
-    if (!localStorage.getItem("JWT")) {
-      navigate("/");
-    }
-  }, []);
 
   useEffect(() => {
     fetchData({
@@ -43,18 +36,15 @@ const ToDo = () => {
         <h2 className="title">My to do list</h2>
         <button onClick={onLogout}>로그아웃</button>
       </header>
-
       <ToDoForm setRefetch={setRefetch} />
-      {localStorage.getItem("JWT") && (
-        <ul>
-          {todos &&
-            todos.map((item) => {
-              return (
-                <ToDoItem key={item.id} item={item} setRefetch={setRefetch} />
-              );
-            })}
-        </ul>
-      )}
+      <ul>
+        {todos &&
+          todos.map((item) => {
+            return (
+              <ToDoItem key={item.id} item={item} setRefetch={setRefetch} />
+            );
+          })}
+      </ul>
     </Wrapper>
   );
 };

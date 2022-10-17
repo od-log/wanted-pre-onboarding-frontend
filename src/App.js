@@ -1,24 +1,21 @@
-import { Routes, Route } from "react-router-dom";
-
 import "./common/reset.css";
 import styles from "./App.module.css";
-import Login from "./pages/login";
-import Join from "./pages/join";
-import ToDo from "./pages/todo";
 import GlobalStyle from "./common/GlobalStyle";
+import { TokenContext } from "./context/tokenContext";
+import { useState } from "react";
+import Router from "./router/router";
 
 function App() {
+  let jwt = localStorage.getItem("JWT") ? true : false;
+  const [token, setToken] = useState(jwt);
+
   return (
-    <div className={styles.app}>
-      {/* 라우트 분리할 것. */}
-      <GlobalStyle />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/join" element={<Join />} />
-        <Route path="/todo" element={<ToDo />} />
-        <Route path="/*" element={<Login />} />
-      </Routes>
-    </div>
+    <TokenContext.Provider value={{ token, setToken }}>
+      <div className={styles.app}>
+        <GlobalStyle />
+        <Router />
+      </div>
+    </TokenContext.Provider>
   );
 }
 
