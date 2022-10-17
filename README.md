@@ -24,6 +24,11 @@ yarn start
 ## 데모 영상
 https://user-images.githubusercontent.com/40523487/196228292-c2bb2f84-2d46-4c89-9a1b-f7b78e532ef1.mp4
 
+리다이렉트 시연 영상
+https://user-images.githubusercontent.com/40523487/196261130-8de8ea04-56f9-4893-8076-39b36918c156.mp4
+
+
+
 ## 배포 링크
 https://od-log.github.io/my-to-do/
 
