@@ -18,7 +18,7 @@ npm start
 
 
 
-<img src="https://img.shields.io/badge/react-#000?style=flat-square&logo=react&logoColor=#61DBFB"/>
+<img src="https://img.shields.io/badge/react-#000?style=flat-square&logo=React&logoColor=#61DBFB"/>
 
 
 
