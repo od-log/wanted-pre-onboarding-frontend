@@ -18,7 +18,7 @@ npm start
 ```
 or
 ```
-
+yarn start
 ```
 
 ## 데모 영상
