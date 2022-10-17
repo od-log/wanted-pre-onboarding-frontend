@@ -15,6 +15,7 @@ npm start
 ## 데모 영상
 
 [![Video Label](http://img.youtube.com/vi/7fhJjfLw1GU/0.jpg)](https://youtu.be/7fhJjfLw1GU)
+<iframe width="640" height="360" src="https://www.youtube.com/embed/6Az2cNU7gUw" frameborder="0" gesture="media" allowfullscreen=""></iframe>
 
 ## 배포 링크
 https://od-log.github.io/my-to-do/
