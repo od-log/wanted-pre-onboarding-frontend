@@ -14,8 +14,10 @@ npm start
 
 ## 데모 영상
 
-## 배포 링크
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7fhJjfLw1GU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## 배포 링크
+https://od-log.github.io/my-to-do/
 
 <img src="https://img.shields.io/badge/React-black?style=flat-square&logo=React&logoColor=#61DBFB"/>
 
