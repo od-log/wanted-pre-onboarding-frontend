@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/my-to-do/static/css/main.8efd66e9.css",
-    "main.js": "/my-to-do/static/js/main.f919864d.js",
-    "static/js/787.e28740e6.chunk.js": "/my-to-do/static/js/787.e28740e6.chunk.js",
-    "static/media/pencil.svg": "/my-to-do/static/media/pencil.7a0f04a8ec782a8146516efbe243081c.svg",
-    "static/media/cancle.svg": "/my-to-do/static/media/cancle.3998f196ab2b588e4b863a5612070856.svg",
-    "static/media/check.svg": "/my-to-do/static/media/check.911a757d39ace946cb4bbbe440cf0ca0.svg",
-    "static/media/add.svg": "/my-to-do/static/media/add.cfc18cb7e2e8844920417ca64b492f81.svg",
-    "index.html": "/my-to-do/index.html",
-    "static/media/trashcan.svg": "/my-to-do/static/media/trashcan.f24f0cd19db7ec2fc61b0774a52900d1.svg",
-    "main.8efd66e9.css.map": "/my-to-do/static/css/main.8efd66e9.css.map",
-    "main.f919864d.js.map": "/my-to-do/static/js/main.f919864d.js.map",
-    "787.e28740e6.chunk.js.map": "/my-to-do/static/js/787.e28740e6.chunk.js.map"
+    "main.css": "http://od-log.github.io/my-to-do/static/css/main.8efd66e9.css",
+    "main.js": "http://od-log.github.io/my-to-do/static/js/main.f8e0fa6c.js",
+    "static/js/787.e28740e6.chunk.js": "http://od-log.github.io/my-to-do/static/js/787.e28740e6.chunk.js",
+    "static/media/pencil.svg": "http://od-log.github.io/my-to-do/static/media/pencil.7a0f04a8ec782a8146516efbe243081c.svg",
+    "static/media/cancle.svg": "http://od-log.github.io/my-to-do/static/media/cancle.3998f196ab2b588e4b863a5612070856.svg",
+    "static/media/check.svg": "http://od-log.github.io/my-to-do/static/media/check.911a757d39ace946cb4bbbe440cf0ca0.svg",
+    "static/media/add.svg": "http://od-log.github.io/my-to-do/static/media/add.cfc18cb7e2e8844920417ca64b492f81.svg",
+    "index.html": "http://od-log.github.io/my-to-do/index.html",
+    "static/media/trashcan.svg": "http://od-log.github.io/my-to-do/static/media/trashcan.f24f0cd19db7ec2fc61b0774a52900d1.svg",
+    "main.8efd66e9.css.map": "http://od-log.github.io/my-to-do/static/css/main.8efd66e9.css.map",
+    "main.f8e0fa6c.js.map": "http://od-log.github.io/my-to-do/static/js/main.f8e0fa6c.js.map",
+    "787.e28740e6.chunk.js.map": "http://od-log.github.io/my-to-do/static/js/787.e28740e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8efd66e9.css",
-    "static/js/main.f919864d.js"
+    "static/js/main.f8e0fa6c.js"
   ]
 }
