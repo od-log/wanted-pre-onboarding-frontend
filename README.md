@@ -17,8 +17,8 @@ npm start
 ## 배포 링크
 
 
-
-<img src="https://img.shields.io/badge/react-#000?style=flat-square&logo=React&logoColor=#61DBFB"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
+<img src="https://img.shields.io/badge/React-black?style=flat-square&logo=React&logoColor=#61DBFB"/>
 
 
 
