@@ -25,8 +25,7 @@ yarn start
 https://user-images.githubusercontent.com/40523487/196228292-c2bb2f84-2d46-4c89-9a1b-f7b78e532ef1.mp4
 
 리다이렉트 시연 영상
-https://user-images.githubusercontent.com/40523487/196261130-8de8ea04-56f9-4893-8076-39b36918c156.mp4
-
+https://user-images.githubusercontent.com/40523487/196261268-665dbac0-db31-4088-893e-c9b0cec6b2fc.mp4
 
 
 ## 배포 링크
