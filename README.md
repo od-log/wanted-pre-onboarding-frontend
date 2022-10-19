@@ -25,7 +25,7 @@ https://user-images.githubusercontent.com/40523487/196261268-665dbac0-db31-4088-
 
 
 ## 배포 링크
-https://clever-brioche-d1bc69.netlify.app/
+https://cool-parfait-857877.netlify.app/
 
 <img src="https://img.shields.io/badge/React-black?style=flat-square&logo=React&logoColor=#61DBFB"/>
 
