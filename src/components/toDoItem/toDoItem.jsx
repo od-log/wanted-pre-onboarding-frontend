@@ -50,12 +50,8 @@ const ToDoItem = ({ item, setRefetch }) => {
   }, [updateTodo.response]);
 
   useEffect(() => {
-    onEdit();
-  }, [checkToggle]);
-
-  useEffect(() => {
     if (deleteTodo.status === 204) {
-      setRefetch();
+      setRefetch((prev) => !prev);
     }
   }, [deleteTodo.status]);
 
@@ -63,15 +59,15 @@ const ToDoItem = ({ item, setRefetch }) => {
     <Wrapper isCompleted={checkToggle}>
       {updateToggle ? (
         <form
-          onSubmit={() => {
-            onEdit();
+          onSubmit={(event) => {
+            onEdit(event);
             setUpdateToggle();
           }}
           className="layout"
         >
           <input
             type="text"
-            defaultValue={todo}
+            defaultValue={toDoState}
             name="updateTodo"
             id="updateTodo"
             className="updateTodo"
