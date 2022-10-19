@@ -37,11 +37,10 @@ const ToDoItem = ({ item, setRefetch }) => {
       method: "PUT",
       url: `/todos/${id}`,
       data: {
-        todo: event.target.updateTodo.value,
+        todo: updateToggle ? event.target.updateTodo.value : toDoState,
         isCompleted: checkToggle,
       },
     });
-    setUpdateToggle();
   };
 
   useEffect(() => {
@@ -51,26 +50,25 @@ const ToDoItem = ({ item, setRefetch }) => {
   }, [updateTodo.response]);
 
   useEffect(() => {
-    updateTodo.fetchData({
-      method: "PUT",
-      url: `/todos/${id}`,
-      data: {
-        todo: toDoState,
-        isCompleted: checkToggle,
-      },
-    });
+    onEdit();
   }, [checkToggle]);
 
   useEffect(() => {
     if (deleteTodo.status === 204) {
-      setRefetch((prev) => !prev);
+      setRefetch();
     }
   }, [deleteTodo.status]);
 
   return (
     <Wrapper isCompleted={checkToggle}>
       {updateToggle ? (
-        <form onSubmit={onEdit} className="layout">
+        <form
+          onSubmit={() => {
+            onEdit();
+            setUpdateToggle();
+          }}
+          className="layout"
+        >
           <input
             type="text"
             defaultValue={todo}
