@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import useInput from "../../hooks/useInput";
 
-const AuthForm = ({ onSubmit, pathName, formRef }) => {
+const AuthForm = ({ onSubmit, pathName }) => {
   const passwordRef = useRef(null);
   const emailCheck = (value) => value.includes("@");
   const maxLen = (value) => value.length >= 8;
@@ -12,7 +12,7 @@ const AuthForm = ({ onSubmit, pathName, formRef }) => {
   const passwordConfirm = useInput("passwordConfirm", equalCheck);
 
   return (
-    <Form ref={formRef} onSubmit={onSubmit}>
+    <Form onSubmit={onSubmit}>
       <label htmlFor="email">이메일</label>
       <input
         type="email"
@@ -23,7 +23,8 @@ const AuthForm = ({ onSubmit, pathName, formRef }) => {
         value={email.value}
         onChange={email.onChange}
       />
-
+      <span className="hint">{email.valid ? "" : email.hint}</span>
+      <Space16 />
       <label htmlFor="password">비밀번호</label>
       <input
         type="password"
@@ -36,6 +37,8 @@ const AuthForm = ({ onSubmit, pathName, formRef }) => {
         onChange={password.onChange}
         ref={passwordRef}
       />
+      <span className="hint">{password.valid ? "" : password.hint}</span>
+      <Space16 />
       {pathName === "/join" && (
         <>
           <input
@@ -49,6 +52,10 @@ const AuthForm = ({ onSubmit, pathName, formRef }) => {
             value={passwordConfirm.value}
             onChange={passwordConfirm.onChange}
           />
+          <span className="hint">
+            {passwordConfirm.valid ? "" : passwordConfirm.hint}
+          </span>
+          <Space16 />
         </>
       )}
 
@@ -74,7 +81,6 @@ const Form = styled.form`
   flex-direction: column;
   label,
   input {
-    margin-bottom: 0.5em;
     font-size: 16px;
   }
   input {
@@ -94,7 +100,6 @@ const Form = styled.form`
   button {
     width: 100%;
     padding: 8px;
-    margin-top: 8px;
     border-radius: 5px;
     background-color: #3cb043;
     color: #fff;
@@ -107,4 +112,12 @@ const Form = styled.form`
     cursor: not-allowed;
     background-color: #808080;
   }
+  .hint {
+    color: red;
+    font-size: 13px;
+  }
+`;
+
+const Space16 = styled.div`
+  height: 16px;
 `;

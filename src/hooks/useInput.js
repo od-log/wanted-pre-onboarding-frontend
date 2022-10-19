@@ -4,6 +4,11 @@ const useInput = (type, validator) => {
   const [value, setValue] = useState("");
   const [hint, setHint] = useState("");
   const [valid, setValid] = useState(false);
+  const hintList = {
+    email: "@를 꼭 입력해주세요.",
+    password: "8자리 이상 입력해주세요.",
+    passwordConfirm: "비밀번호가 일치하지 않습니다.",
+  };
 
   const onChange = (event) => {
     const {
@@ -15,7 +20,7 @@ const useInput = (type, validator) => {
       setValid(validCheck);
     }
     if (!valid) {
-      setHint([type]);
+      setHint(hintList[type]);
     }
     setValue(value);
   };
