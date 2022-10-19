@@ -4,19 +4,15 @@
 ```
 git clone https://github.com/od-log/wanted-pre-onboarding-frontend.git
 ```
-2. root 폴더에 .env 파일 생성 후 아래 코드를 입력해 주세요.
-```
-REACT_APP_BASE_URL = https://pre-onboarding-selection-task.shop 
-```
-3. 아래 명령어로 npm을 설치해주세요.
+2. 아래 명령어로 npm을 설치해주세요.
 ```
 npm install
 ```
-4. 아래 명령어로 npm 또는 yarn을 실행해주세요.
+3. 아래 명령어로 npm 또는 yarn을 실행해주세요.
 ```
 npm start
 ```
-or
+또는
 ```
 yarn start
 ```
@@ -29,9 +25,10 @@ https://user-images.githubusercontent.com/40523487/196261268-665dbac0-db31-4088-
 
 
 ## 배포 링크
-https://od-log.github.io/my-to-do/
+https://clever-brioche-d1bc69.netlify.app/
 
 <img src="https://img.shields.io/badge/React-black?style=flat-square&logo=React&logoColor=#61DBFB"/>
+
 
 
 
